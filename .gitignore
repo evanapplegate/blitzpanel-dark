@@ -1,0 +1,21 @@
+node_modules/
+dist/
+*.glb
+*.gltf
+.DS_Store
+
+# CAD files
+*.blend
+*.blend1
+*.STEP
+*.step
+*.stl
+*.obj
+*.mtl
+*.FCStd
+*.ai
+*.bin
+*Montagem*
+
+
+
