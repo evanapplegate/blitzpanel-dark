@@ -1,6 +1,7 @@
 node_modules/
 dist/
 *.glb
+!enclosure4.glb
 *.gltf
 .DS_Store
 
