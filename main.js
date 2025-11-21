@@ -45,7 +45,7 @@ class AssemblyAnimation {
         this.renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.5)); // Lower pixel ratio for performance
         this.renderer.shadowMap.enabled = true; // Enable shadows
         this.renderer.shadowMap.type = THREE.PCFSoftShadowMap;
-        this.renderer.setClearColor(0xFEFAF6, 1); // Light background
+        this.renderer.setClearColor(0x111111, 1); // Dark background
         this.renderer.sortObjects = false; // Disable sorting for performance
         container.appendChild(this.renderer.domElement);
 
@@ -272,7 +272,7 @@ class AssemblyAnimation {
                 // 1. Create Occluder Mesh (Solid background color)
                 // This blocks the view of lines behind it
                 const occluderMaterial = new THREE.MeshBasicMaterial({
-                    color: 0xFEFAF6, // Match background color
+                    color: 0x111111, // Match dark background color
                     side: THREE.DoubleSide,
                     polygonOffset: true,
                     polygonOffsetFactor: 1,
@@ -291,7 +291,7 @@ class AssemblyAnimation {
                 // This visually "merges" coplanar polygons, removing diagonal triangulation lines
                 const edgesGeometry = new THREE.EdgesGeometry(geometry, 15); // 15 degree threshold
                 const wireframeMaterial = new THREE.LineBasicMaterial({
-                    color: 0xDDDAD7
+                    color: 0x464646
                 });
                 const wireframeMesh = new THREE.LineSegments(edgesGeometry, wireframeMaterial);
                 wireframeMesh.position.set(0, 0, 0);
